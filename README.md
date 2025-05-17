@@ -115,7 +115,7 @@ This project utilizes the following packages:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/X-Hozmi/Flutter_Pemobile_GetX.git
+git clone https://github.com/X-Hozmi/flutter_pemobile_getx.git
 ```
 
 2. Install dependencies:
