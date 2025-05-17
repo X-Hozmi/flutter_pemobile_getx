@@ -1,0 +1,29 @@
+{
+	"data": {
+		"profile": {
+			"name": "Your Name",
+			"role": "Flutter Developer",
+			"location": "Jakarta Pusat, Indonesia",
+			"email": "user@email.com",
+			"linkedin": "https://www.linkedin.com/in/your-linkedin-username",
+			"phone": "+62 123 4567 8901",
+			"about": "A passionate Full-Stack Developer specializing in Flutter for frontend and Laravel for backend development. With a versatile skill set, I also take on multiple roles, including System Administrator, Database Engineer, DevOps Engineer, and Cloud Engineer. I thrive in designing scalable applications, integrating robust APIs, and optimizing infrastructure to ensure high performance and security."
+		},
+		"competencies": [
+			"Software Development",
+			"Integration Strategy"
+		],
+		"stacks": [
+			"Flutter"
+		],
+		"educations": [
+			{
+				"university": "Universitas Bina Sarana Informatika",
+				"url": "https://www.bsi.ac.id/ubsi/index.js",
+				"start": "2022-09-01",
+				"degree": "Bachelor",
+				"majors": ["Informatics Engineering"]
+			}
+		]
+	}
+}

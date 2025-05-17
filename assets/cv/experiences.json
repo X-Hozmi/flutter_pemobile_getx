@@ -1,0 +1,19 @@
+[
+	{
+		"company": "Your Company Name",
+		"url": "https://company.com",
+		"role": "Flutter Developer",
+		"place": "Office",
+		"hour": "Full-Time",
+		"start": "2023-01-01",
+		"responsibilites": [
+			"Create Robust and Scalable Mobile Applications"
+		],
+		"technologies": [
+			"Flutter",
+			"Android",
+			"iOS",
+			"GitHub"
+		]
+	}
+]
