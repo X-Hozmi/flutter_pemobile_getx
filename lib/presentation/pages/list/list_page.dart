@@ -1,49 +1,9 @@
-// import 'package:flutter/material.dart';
-// import 'package:get/get.dart';
-
-// class ListPage extends StatelessWidget {
-//   ListPage({super.key});
-
-//   final List<Map<String, dynamic>> data = [
-//     {"name": "Home", "address": "123 Main St, Springfield, USA"},
-//     {"name": "Work", "address": "456 Elm St, Springfield, USA"},
-//     {"name": "School", "address": "789 Oak St, Springfield, USA"},
-//   ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: Text('List Tile Page')),
-//       body: ListView.builder(
-//         padding: const EdgeInsets.all(10),
-//         itemCount: data.length,
-//         itemBuilder: (context, index) {
-//           return ListTile(
-//             leading: Icon(Icons.person),
-//             title: Text(data[index]['name']),
-//             subtitle: Text(data[index]['address']),
-//             trailing: InkWell(child: Icon(Icons.delete), onTap: () {}),
-//             onTap: () {
-//               Get.snackbar(
-//                 data[index]['name'],
-//                 data[index]['address'],
-//                 snackPosition: SnackPosition.BOTTOM,
-//                 backgroundColor: Colors.blue,
-//                 colorText: Colors.white,
-//               );
-//             },
-//           );
-//         },
-//       ),
-//     );
-//   }
-// }
-
 import 'dart:convert';
 import 'dart:developer';
 
 import 'package:crypto/crypto.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_pemobile_getx/domain/entities/person/person.dart';
 import 'package:flutter_pemobile_getx/presentation/controllers/person_controller.dart';
 import 'package:get/get.dart';

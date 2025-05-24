@@ -124,7 +124,10 @@ class PersonFormSheet extends StatelessWidget {
 
                         TextFormField(
                           controller: personController.handphoneController,
-                          keyboardType: TextInputType.phone,
+                          keyboardType: TextInputType.number,
+                          inputFormatters: <TextInputFormatter>[
+                            FilteringTextInputFormatter.digitsOnly,
+                          ],
                           decoration: InputDecoration(
                             labelText: 'Phone Number *',
                             prefixIcon: Icon(Icons.phone),
@@ -412,33 +415,9 @@ class PersonFormSheet extends StatelessWidget {
       String snackBarTitle = '';
 
       if (personController.isError) {
-        // Get.showSnackbar(
-        //   GetSnackBar(
-        //     title:
-        //         personController.isEditMode.value
-        //             ? 'Update Failed'
-        //             : 'Save Failed',
-        //     message: personController.message,
-        //     backgroundColor: Colors.red,
-        //     duration: Duration(seconds: 3),
-        //   ),
-        // );
-
         snackBarTitle =
             personController.isEditMode.value ? 'Update Failed' : 'Save Failed';
       } else {
-        // Get.showSnackbar(
-        //   GetSnackBar(
-        //     title: 'Success',
-        //     message:
-        //         personController.isEditMode.value
-        //             ? 'Person updated successfully'
-        //             : 'Person added successfully',
-        //     backgroundColor: Colors.green,
-        //     duration: Duration(seconds: 2),
-        //   ),
-        // );
-
         onSaved?.call();
 
         if (context.mounted) {
@@ -460,15 +439,6 @@ class PersonFormSheet extends StatelessWidget {
           ),
         );
       }
-    } catch (e) {
-      // Get.showSnackbar(
-      //   GetSnackBar(
-      //     title: 'Error',
-      //     message: 'An unexpected error occurred: $e',
-      //     backgroundColor: Colors.red,
-      //     duration: Duration(seconds: 3),
-      //   ),
-      // );
     } finally {
       personController.setLoading(false);
     }
