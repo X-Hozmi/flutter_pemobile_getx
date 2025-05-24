@@ -4,9 +4,9 @@ import 'package:flutter_pemobile_getx/domain/repositories/auth_repository.dart';
 import 'package:flutter_pemobile_getx/utils/failure.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
-  final AuthLocalDataSource dataSource;
+  final AuthLocalDataSource localDataSource;
 
-  AuthRepositoryImpl({required this.dataSource});
+  AuthRepositoryImpl({required this.localDataSource});
 
   @override
   Future<Either<Failure, bool>> login(
@@ -14,7 +14,7 @@ class AuthRepositoryImpl implements AuthRepository {
     String password,
   ) async {
     try {
-      return Right(await dataSource.login(emailOrPhone, password));
+      return Right(await localDataSource.login(emailOrPhone, password));
     } catch (e) {
       rethrow;
     }
@@ -23,7 +23,7 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<Either<Failure, bool>> logout() async {
     try {
-      return Right(await dataSource.logout());
+      return Right(await localDataSource.logout());
     } catch (e) {
       rethrow;
     }

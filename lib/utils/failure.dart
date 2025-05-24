@@ -28,3 +28,7 @@ class CacheFailure extends Failure {
 class TimeoutFailure extends Failure {
   const TimeoutFailure(super.message);
 }
+
+class DatabaseFailure extends Failure {
+  const DatabaseFailure(super.message);
+}

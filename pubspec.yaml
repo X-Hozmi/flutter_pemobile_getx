@@ -54,6 +54,10 @@ dependencies:
   sqflite: ^2.4.2
   camera: ^0.11.1
   image_picker: ^1.1.2
+  fl_chart: ^1.0.0
+  lucide_icons: ^0.257.0
+  provider: ^6.1.5
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:
