@@ -32,3 +32,7 @@ class TimeoutFailure extends Failure {
 class DatabaseFailure extends Failure {
   const DatabaseFailure(super.message);
 }
+
+class UnexpectedFailure extends Failure {
+  const UnexpectedFailure(super.message);
+}

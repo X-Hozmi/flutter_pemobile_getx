@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pemobile_getx/domain/entities/person/person.dart';
 import 'package:flutter_pemobile_getx/presentation/controllers/person_controller.dart';
+import 'package:flutter_pemobile_getx/presentation/pages/project/project_page.dart';
 import 'package:get/get.dart';
 
 part 'parts/person_form_sheet.dart';
@@ -18,12 +19,41 @@ class ListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('List Pages'),
+          bottom: TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.list), text: 'List Tile Page'),
+              Tab(icon: Icon(Icons.work), text: 'Project Page'),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            ListTilePageContent(personController: personController),
+            ProjectPage(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ListTilePageContent extends StatelessWidget {
+  final PersonController personController;
+
+  const ListTilePageContent({super.key, required this.personController});
+
+  @override
+  Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       personController.getPerson();
     });
 
     return Scaffold(
-      appBar: AppBar(title: Text('List Tile Page')),
       body: GetBuilder<PersonController>(
         builder: (controller) {
           if (controller.isLoading.value) {
@@ -84,7 +114,7 @@ class ListPage extends StatelessWidget {
                   margin: EdgeInsets.symmetric(vertical: 4),
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: Colors.blue.withOpacity(0.1),
+                      backgroundColor: Colors.blue.withValues(alpha: 0.1),
                       child: Icon(Icons.person),
                     ),
                     title: Text(

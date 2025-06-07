@@ -61,6 +61,7 @@ dependencies:
   sqflite_common_ffi: ^2.3.5
   drift: ^2.26.1
   drift_flutter: ^0.2.4
+  responsive_framework: ^1.5.1
 
 dev_dependencies:
   flutter_test:

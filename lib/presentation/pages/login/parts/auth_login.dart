@@ -47,9 +47,9 @@ class _AuthLoginState extends State<AuthLogin> {
                 Container(
                   padding: const EdgeInsets.all(8.0),
                   decoration: BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(color: Colors.grey[100]!),
-                    ),
+                    // border: Border(
+                    //   bottom: BorderSide(color: Colors.grey[100]!),
+                    // ),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,7 +57,7 @@ class _AuthLoginState extends State<AuthLogin> {
                       const Text(
                         "Email atau Handphone",
                         style: TextStyle(
-                          color: Colors.black,
+                          // color: Colors.black,
                           fontSize: 16,
                           fontWeight: FontWeight.w700,
                         ),
@@ -91,7 +91,7 @@ class _AuthLoginState extends State<AuthLogin> {
                                   : null,
                           prefixStyle: const TextStyle(
                             fontSize: 16,
-                            color: Colors.black,
+                            // color: Colors.black,
                           ),
                         ),
                         validator: (value) {
@@ -124,7 +124,7 @@ class _AuthLoginState extends State<AuthLogin> {
                       const Text(
                         "Password",
                         style: TextStyle(
-                          color: Colors.black,
+                          // color: Colors.black,
                           fontSize: 16,
                           fontWeight: FontWeight.w700,
                         ),

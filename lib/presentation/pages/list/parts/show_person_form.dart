@@ -8,7 +8,7 @@ void showPersonForm(
   showModalBottomSheet(
     context: context,
     isScrollControlled: true,
-    backgroundColor: Colors.transparent,
+    // backgroundColor: Colors.transparent,
     builder:
         (context) => PersonFormSheet(
           person: person,
