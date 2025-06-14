@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pemobile_getx/domain/entities/person/person.dart';
 import 'package:flutter_pemobile_getx/presentation/controllers/person_controller.dart';
+import 'package:flutter_pemobile_getx/presentation/pages/product/product_page.dart';
 import 'package:flutter_pemobile_getx/presentation/pages/project/project_page.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +21,7 @@ class ListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: Text('List Pages'),
@@ -28,6 +29,7 @@ class ListPage extends StatelessWidget {
             tabs: [
               Tab(icon: Icon(Icons.list), text: 'List Tile Page'),
               Tab(icon: Icon(Icons.work), text: 'Project Page'),
+              Tab(icon: Icon(Icons.shop), text: 'Product Page'),
             ],
           ),
         ),
@@ -35,6 +37,7 @@ class ListPage extends StatelessWidget {
           children: [
             ListTilePageContent(personController: personController),
             ProjectPage(),
+            ProductPage(),
           ],
         ),
       ),

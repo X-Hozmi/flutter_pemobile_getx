@@ -2,6 +2,8 @@ import 'dart:convert';
 
 const double a4Width = 595.28;
 
+const String dummyJsonUrl = 'https://dummyjson.com';
+
 const String gitHubApiUrl = 'https://api.github.com';
 
 const String gitHubUsername = 'YourGitHubUserName';
