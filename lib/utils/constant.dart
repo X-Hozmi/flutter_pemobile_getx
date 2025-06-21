@@ -26,6 +26,7 @@ class Routes {
   static const String loginPage = '/login';
   static const String homePage = '/';
   static const String listPage = '/list';
+  static const String imageVideoPage = '/imageVideo';
   static const String profilePage = '/profile';
   static const String projectPage = '/projects';
   static const String cvPage = '/cv';

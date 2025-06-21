@@ -37,6 +37,11 @@ class _NavigationPageState extends State<NavigationPage> {
       label: 'List',
     ),
     NamedNavigationBarItemWidget(
+      initialLocation: 'imageVideo',
+      icon: const Icon(Icons.image),
+      label: 'Image',
+    ),
+    NamedNavigationBarItemWidget(
       initialLocation: 'profile',
       icon: const Icon(Icons.person),
       label: 'Profile',
@@ -52,6 +57,7 @@ class _NavigationPageState extends State<NavigationPage> {
     final mainPages = [
       Routes.homePage,
       Routes.listPage,
+      Routes.imageVideoPage,
       Routes.profilePage,
       Routes.cvPage,
     ];
